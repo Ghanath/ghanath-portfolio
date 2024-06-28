@@ -1,0 +1,87 @@
+h3 {
+  font-size: var(--font-size-700);
+}
+
+p {
+  font-size: var(--font-size-200);
+  color: var(--medium-gray);
+}
+
+.home_nav_bar .nav_link.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.content_align {
+  /* centering everything */
+  display: grid;
+  align-items: center;
+}
+
+.background_image {
+  min-height: 100dvh;
+
+  background-image: url(../assets/backgroundImages/laptopbg.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* typograpgy */
+  color: var(--text-gray);
+  letter-spacing: 1px;
+
+  /* background opacity */
+  position: relative;
+  isolation: isolate;
+
+  line-height: 1.5;
+
+  /* border: 5px solid magenta; */
+}
+
+/* for background opacity */
+.background_image::after {
+  content: "";
+
+  position: absolute;
+  background-color: black;
+  inset: 0;
+
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.landing_page_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3rem;
+
+  /* border: 2px solid greenyellow; */
+  backdrop-filter: blur(4px);
+}
+
+.intro_text {
+  border-top: 1px solid var(--primary-white);
+  border-bottom: 1px solid var(--primary-white);
+
+  padding-block: 3rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  width: 70%;
+}
+
+.quick_links_updated {
+  position: absolute;
+
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
